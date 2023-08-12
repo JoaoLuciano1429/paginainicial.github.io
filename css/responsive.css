@@ -1,0 +1,262 @@
+@media (min-width: 2560px) {
+  .container > time {
+    font-size: 9rem;
+  }
+
+  form #search {
+    border-radius: 7rem;
+  }
+
+  form #search label input[type="text"] {
+    width: 100rem;
+    height: 9rem;
+    font-size: 6.5rem;
+    padding-left: 2rem;
+    border-radius: 7rem 0 0 7rem;
+  }
+
+  form #search button[type="submit"] {
+    width: 10rem;
+    height: 9rem;
+    font-size: 6.5rem;
+    border-radius: 0 7rem 7rem 0;
+    border-left: 3px dotted #ddd;
+  }
+
+  form #chooseMethod {
+    font-size: 6rem;
+    gap: 1rem;
+  }
+
+  form #chooseMethod p {
+    padding-right: 8rem;
+  }
+
+  form #chooseMethod input[type="radio"] {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  hr {
+    border: 4px solid #0042f86b;
+    width: 130rem;
+  }
+
+  .shortcuts {
+    width: 100rem;
+    height: 90.5rem;
+    gap: 4rem;
+  }
+
+  .shortcuts a {
+    gap: 2rem;
+    font-size: 3rem;
+  }
+
+  .shortcuts a button {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .shortcuts #youtube {
+    background-size: 14rem;
+  }
+
+  .shortcuts #linkedin {
+    background-size: 10rem;
+  }
+
+  .shortcuts #friv {
+    background-size: 8rem;
+  }
+
+  .shortcuts #shopee {
+    background-size: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container > time {
+    font-size: 4.5rem;
+  }
+  form #search label input[type="text"] {
+    width: 42.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    padding-left: 0.7rem;
+  }
+  form #search button[type="submit"] {
+    width: 4.25rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+  form #chooseMethod {
+    font-size: 1.5rem;
+  }
+  form #chooseMethod p {
+    padding-right: 4.5rem;
+  }
+  form #chooseMethod input[type="radio"] {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  hr {
+    width: 47.5rem;
+  }
+  .shortcuts {
+    width: 24rem;
+    height: 14.5rem;
+  }
+  .shortcuts a button {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}
+
+@media (max-width: 425px) {
+  html,
+  body {
+    background-position: right;
+  }
+
+  .container > time {
+    font-size: 3.75rem;
+  }
+
+  form #search label input[type="text"] {
+    width: 24rem;
+    height: 2rem;
+    font-size: 1rem;
+    padding-left: 0.6rem;
+  }
+
+  form #search button[type="submit"] {
+    width: 2.4rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  form #chooseMethod {
+    font-size: 1.1rem;
+  }
+
+  form #chooseMethod p {
+    padding-right: 4rem;
+  }
+
+  form #chooseMethod input[type="radio"] {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  hr {
+    width: 25rem;
+    border: 1px solid #0042f86b;
+  }
+
+  .shortcuts {
+    width: 22rem;
+    height: 12.5rem;
+  }
+
+  .shortcuts a {
+    font-size: 0.8rem;
+  }
+
+  .shortcuts a button {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .shortcuts #youtube {
+    background-size: 7rem;
+  }
+
+  .shortcuts #linkedin {
+    background-size: 5rem;
+  }
+
+  .shortcuts #friv {
+    background-size: 4rem;
+  }
+
+  .shortcuts #shopee {
+    background-size: 3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .container > time {
+    font-size: 3rem;
+  }
+
+  form #search label input[type="text"] {
+    width: 18rem;
+    height: 1.75rem;
+    font-size: 0.6rem;
+    padding-left: 0.4rem;
+  }
+
+  form #search button[type="submit"] {
+    width: 1.8rem;
+    height: 1.75rem;
+    font-size: 0.6rem;
+  }
+
+  form #chooseMethod {
+    font-size: 0.8rem;
+  }
+
+  form #chooseMethod p {
+    padding-right: 3rem;
+  }
+
+  form #chooseMethod input[type="radio"] {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  hr {
+    width: 15rem;
+  }
+
+  .shortcuts {
+    width: 20rem;
+    height: 10.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 2.5rem);
+    grid-template-areas:
+      "youtube" "linkedin"
+      "friv" "shopee";
+    transform: translateY(25%);
+  }
+
+  .shortcuts a {
+    font-size: 0.7rem;
+  }
+
+  .shortcuts a button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .shortcuts #youtube {
+    background-size: 6rem;
+    grid-area: youtube;
+  }
+
+  .shortcuts #linkedin {
+    background-size: 4rem;
+    grid-area: linkedin;
+  }
+
+  .shortcuts #friv {
+    background-size: 3rem;
+    grid-area: friv;
+  }
+
+  .shortcuts #shopee {
+    background-size: 2rem;
+    grid-area: shopee;
+  }
+}

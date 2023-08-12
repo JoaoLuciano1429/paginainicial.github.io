@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("../img/DSC00034.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #ffffff60;
+  background-image: linear-gradient(180deg, #ffffff60 50%, #ffffffd0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container > time {
+  color: #0f0500;
+  font-size: 5.625rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+}
+
+form #search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 3.125rem;
+}
+
+form #search label input[type="text"] {
+  width: 43.75rem;
+  height: 3.75rem;
+  font-size: 2.5rem;
+  border: none;
+  border-radius: 3.125rem 0 0 3.125rem;
+  padding-left: 1.875rem;
+}
+
+form #search button[type="submit"] {
+  width: 4.375rem;
+  height: 3.75rem;
+  font-size: 2.5rem;
+  border: none;
+  border-radius: 0 3.125rem 3.125rem 0;
+  border-left: 1px dotted #ddd;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+form #chooseMethod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.1875rem;
+}
+
+form #chooseMethod p {
+  padding-right: 5.625rem;
+}
+
+form #chooseMethod input[type="radio"] {
+  width: 2rem;
+  height: 2rem;
+  accent-color: #0042f8;
+}
+
+hr {
+  border: 2px solid #0042f86b;
+  width: 56.25rem;
+}
+
+.shortcuts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 15.625rem;
+  gap: 1.5625rem;
+}
+
+.shortcuts #youtube {
+  background-image: url("../img/youtube.png");
+  background-size: 8rem;
+}
+
+.shortcuts #linkedin {
+  background-image: url("../img/linkedin.png");
+  background-size: 6rem;
+}
+
+.shortcuts #friv {
+  background-image: url("../img/friv.png");
+  background-size: 5.375rem;
+}
+
+.shortcuts #shopee {
+  background-image: url("../img/shopee.png");
+  background-size: 4rem;
+}
+
+.shortcuts a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+
+.shortcuts a button {
+  background-position: center;
+  clip-path: polygon(
+    50% 0%,
+    83% 12%,
+    100% 43%,
+    94% 78%,
+    68% 100%,
+    32% 100%,
+    6% 78%,
+    0% 43%,
+    17% 12%
+  );
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  cursor: pointer;
+}
+
+.shortcuts a button span {
+  text-align: center;
+}

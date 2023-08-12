@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Página Inicial" />
+    <meta
+      property="og:description"
+      content="A página inicial feita para o seu navegador que contém relógio, barra de pesquisa do Google/Bing, e atalhos predefinidos."
+    />
+    <meta property="og:image" content="img/cover/preview.png" />
+    <meta name="theme-color" content="#0042f8" />
+    <link
+      rel="shortcut icon"
+      href="img/icon/icons8-house.svg"
+      type="image/x-icon"
+    />
+    <title>Página inicial</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <time onload="showTime()"></time>
+      <form action="https://www.google.com/search" target="_blank">
+        <div id="search">
+          <label for="q">
+            <input
+              type="text"
+              name="q"
+              id="q"
+              placeholder="Pesquisar na Web"
+              autocomplete="off"
+            />
+          </label>
+          <button type="submit">&#128269;</button>
+        </div>
+        <div id="chooseMethod">
+          <p>Mecanismo de busca:</p>
+          <input
+            type="radio"
+            name="metodo"
+            id="Google"
+            value="Google"
+            checked
+          />
+          <label for="Google">Google</label>
+          <input type="radio" name="metodo" id="Bing" value="Bing" />
+          <label for="Bing">Bing</label>
+        </div>
+      </form>
+      <br /><br />
+      <hr />
+      <section class="shortcuts">
+        <a href="https://www.youtube.com/" id="YouTube"
+          ><button id="youtube"></button><span>YouTube</span></a
+        >
+        <a href="https://www.linkedin.com/" id="LinkedIn"
+          ><button id="linkedin"></button><span>LinkedIn</span></a
+        >
+        <a href="https://www.friv-legend.com/" id="Friv">
+          <button id="friv"></button>
+          <span>Friv</span>
+        </a>
+        <a href="https://www.shopee.com.br/" id="Shopee"
+          ><button id="shopee"></button> <span>Shopee</span></a
+        >
+      </section>
+    </div>
+  </body>
+</html>

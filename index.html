@@ -9,7 +9,7 @@
       content="A página inicial feita para o seu navegador que contém relógio, barra de pesquisa do Google/Bing, e atalhos predefinidos."
     />
     <meta property="og:image" content="https://i.imgur.com/KtaiEZL.png" />
-    <meta name="theme-color" content="#0042f8" />
+    <meta name="theme-color" content="#0042F8" />
     <link
       rel="shortcut icon"
       href="img/icon/icons8-house.svg"
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="css/allDevices.css" type="text/css" />
   </head>
   <body>
     <div class="container">
@@ -32,21 +33,23 @@
               id="q"
               placeholder="Pesquisar na Web"
               autocomplete="off"
+              role="search"
+              aria-label="Pesquisar na Web com Google ou Bing"
             />
           </label>
-          <button type="submit">&#128269;</button>
+          <button type="submit" role="button">&#128269;</button>
         </div>
         <div id="chooseMethod">
           <p>Mecanismo de busca:</p>
           <input
             type="radio"
-            name="metodo"
+            name="method"
             id="Google"
             value="Google"
             checked
           />
           <label for="Google">Google</label>
-          <input type="radio" name="metodo" id="Bing" value="Bing" />
+          <input type="radio" name="method" id="Bing" value="Bing" />
           <label for="Bing">Bing</label>
         </div>
       </form>
@@ -54,17 +57,36 @@
       <hr />
       <section class="shortcuts">
         <a href="https://www.youtube.com/" id="YouTube"
-          ><button id="youtube"></button><span>YouTube</span></a
+          ><button
+            id="youtube"
+            type="button"
+            aria-label="Botão para o YouTube"
+          ></button
+          ><span>YouTube</span></a
         >
         <a href="https://www.linkedin.com/" id="LinkedIn"
-          ><button id="linkedin"></button><span>LinkedIn</span></a
+          ><button
+            id="linkedin"
+            type="button"
+            aria-label="Botão para o LinkedIn"
+          ></button
+          ><span>LinkedIn</span></a
         >
         <a href="https://www.friv-legend.com/" id="Friv">
-          <button id="friv"></button>
+          <button
+            id="friv"
+            type="button"
+            aria-label="Botão para o Friv"
+          ></button>
           <span>Friv</span>
         </a>
         <a href="https://www.shopee.com.br/" id="Shopee"
-          ><button id="shopee"></button> <span>Shopee</span></a
+          ><button
+            id="shopee"
+            type="button"
+            aria-label="Botão para a Shopee"
+          ></button>
+          <span>Shopee</span></a
         >
       </section>
     </div>

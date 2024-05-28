@@ -88,7 +88,7 @@ form.addEventListener("submit", (ev) => {
   let containsForbiddenWord = false;
 
   for (let word of forbiddenWords) {
-    if (searchInput.includes(word)) {
+    if (searchInput.value.includes(word)) {
       containsForbiddenWord = true;
       break;
     }

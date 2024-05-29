@@ -78,38 +78,3 @@ shopee.addEventListener("click", () => {
     icon: "img/icon/Cacil.jpg",
   });
 });
-
-form.addEventListener("submit", (ev) => {
-  ev.preventDefault();
-
-  const searchInput = document.getElementById("q");
-
-  const forbiddenWords = ["demônio", "ditador", "tirano", "demonio", "capeta"];
-  let containsForbiddenWord = false;
-
-  for (let word of forbiddenWords) {
-    if (searchInput.value.includes(word)) {
-      containsForbiddenWord = true;
-      break;
-    }
-  }
-
-  const showFwNotification = (permission) => {
-    if (permission !== "granted") return;
-
-    let fwNotification = new Notification("Cacil", {
-      body: "Olha o mazoquismo! Estou de olho!",
-      icon: "img/icon/Cacil.jpg",
-    });
-
-    fwNotification.onclick = () => {
-      alert(
-        "Seu vagabundo, acha que pode me enganar? Sua pesquisa contém palavras proibidas, mude seu jeito de falar, masoquista!"
-      );
-    };
-  };
-
-  if (containsForbiddenWord) {
-    showFwNotification();
-  }
-});

@@ -15,24 +15,26 @@ function showTime() {
 
 showTime();
 
-window.addEventListener("load", () => {
-  if (!window.Notification) return;
-
-  Notification.requestPermission().then(showNotification);
-});
-
-function showNotification(permission) {
-  if (permission !== "granted") return;
-
-  let notification = new Notification("Cacil", {
-    body: "Eu estou te vigiando!",
-    icon: "img/icon/Cacil.jpg",
+function showNotification(title, body, icon) {
+  let notification = new Notification(title, {
+    body: body,
+    icon: icon,
   });
 
   notification.onclick = () => {
     alert("Esteja ciente disso!");
   };
 }
+
+window.addEventListener("load", () => {
+  if (!window.Notification) return;
+
+  Notification.requestPermission().then((permission) => {
+    if (permission === "granted") {
+      showNotification("Cacil", "Eu estou te vigiando!", "img/icon/Cacil.jpg");
+    }
+  });
+});
 
 const form = document.querySelector("form");
 const google = document.getElementById("Google");
@@ -77,4 +79,26 @@ shopee.addEventListener("click", () => {
     body: "Nada de gastar com besteiras! Quero ver só quando o dinheiro acabar.",
     icon: "img/icon/Cacil.jpg",
   });
+});
+
+form.addEventListener("submit", (ev) => {
+  const searchInput = document.getElementById("q").value;
+
+  const forbiddenWords = ["demônio", "ditador", "tirano", "demonio", "capeta"];
+  let containsForbiddenWord = forbiddenWords.some((word) =>
+    searchInput.includes(word)
+  );
+
+  if (containsForbiddenWord) {
+    ev.preventDefault();
+
+    showNotification(
+      "Cacil",
+      "Olha o mazoquismo! Estou de olho!",
+      "img/icon/Cacil.jpg"
+    );
+    alert(
+      "Seu vagabundo, acha que pode me enganar? Sua pesquisa contém palavras proibidas, mude seu jeito de falar, masoquista!"
+    );
+  }
 });

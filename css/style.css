@@ -1,3 +1,5 @@
+/* style.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +10,6 @@ html,
 body {
   width: 100vw;
   height: 100vh;
-  min-width: 100vw;
-  min-height: 100vh;
   background-image: url("../img/DSC00034.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,8 +18,6 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
-  min-width: 100vw;
-  min-height: 100vh;
   background-color: #ffffff60;
   background-image: linear-gradient(180deg, #ffffff60 50%, #ffffffd0 100%);
   display: flex;
@@ -41,10 +39,12 @@ form #search {
   align-items: center;
   border: 1px solid #000;
   border-radius: 3.125rem;
+  width: 80%; /* Ajuste para responsividade */
+  max-width: 43.75rem; /* Máximo para telas grandes */
 }
 
 form #search label input[type="text"] {
-  width: 43.75rem;
+  width: 100%;
   height: 3.75rem;
   font-size: 2.5rem;
   border: none;
@@ -70,10 +70,13 @@ form #chooseMethod {
   gap: 0.75rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2.1875rem;
+  flex-wrap: wrap; /* Para telas menores */
 }
 
 form #chooseMethod p {
   padding-right: 5.625rem;
+  flex-basis: 100%; /* Para telas menores */
+  text-align: center; /* Para telas menores */
 }
 
 form #chooseMethod input[type="radio"] {
@@ -84,16 +87,18 @@ form #chooseMethod input[type="radio"] {
 
 hr {
   border: 2px solid #0042f86b;
-  width: 56.25rem;
+  width: 80%; /* Ajuste para responsividade */
+  max-width: 56.25rem; /* Máximo para telas grandes */
 }
 
 .shortcuts {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25rem;
-  height: 15.625rem;
+  width: 90%; /* Ajuste para responsividade */
+  max-width: 25rem; /* Máximo para telas grandes */
   gap: 1.5625rem;
+  flex-wrap: wrap; /* Para telas menores */
 }
 
 .shortcuts #youtube {
@@ -148,4 +153,170 @@ hr {
 
 .shortcuts a button span {
   text-align: center;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .container > time {
+    font-size: 4.5rem;
+  }
+
+  form #search label input[type="text"] {
+    height: 2.5rem;
+    font-size: 1.25rem;
+    padding-left: 0.7rem;
+  }
+
+  form #search button[type="submit"] {
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+
+  form #chooseMethod {
+    font-size: 1.5rem;
+  }
+
+  form #chooseMethod p {
+    padding-right: 0; /* Removido para centralizar */
+  }
+
+  hr {
+    width: 90%;
+  }
+
+  .shortcuts {
+    width: 95%;
+  }
+
+  .shortcuts a button {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}
+
+@media (max-width: 425px) {
+  html,
+  body {
+    background-position: right;
+  }
+
+  .container > time {
+    font-size: 3.75rem;
+  }
+
+  form #search label input[type="text"] {
+    height: 2rem;
+    font-size: 1rem;
+    padding-left: 0.6rem;
+  }
+
+  form #search button[type="submit"] {
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  form #chooseMethod {
+    font-size: 1.1rem;
+  }
+
+  form #chooseMethod input[type="radio"] {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  hr {
+    width: 95%;
+  }
+
+  .shortcuts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ajuste para grid responsivo */
+    gap: 1rem;
+  }
+
+  .shortcuts a {
+    font-size: 0.8rem;
+  }
+
+  .shortcuts a button {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .shortcuts #youtube {
+    background-size: 7rem;
+  }
+
+  .shortcuts #linkedin {
+    background-size: 5rem;
+  }
+
+  .shortcuts #friv {
+    background-size: 4rem;
+  }
+
+  .shortcuts #shopee {
+    background-size: 3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .container > time {
+    font-size: 3rem;
+  }
+
+  form #search label input[type="text"] {
+    height: 1.75rem;
+    font-size: 0.6rem;
+    padding-left: 0.4rem;
+  }
+
+  form #search button[type="submit"] {
+    height: 1.75rem;
+    font-size: 0.6rem;
+  }
+
+  form #chooseMethod {
+    font-size: 0.8rem;
+  }
+
+  form #chooseMethod input[type="radio"] {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  hr {
+    width: 95%;
+  }
+
+  .shortcuts {
+    grid-template-columns: repeat(2, 1fr); /* Ajuste para grid responsivo */
+    gap: 0.5rem;
+  }
+
+  .shortcuts a {
+    font-size: 0.7rem;
+  }
+
+  .shortcuts a button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .shortcuts #youtube {
+    background-size: 6rem;
+  }
+
+  .shortcuts #linkedin {
+    background-size: 4rem;
+  }
+
+  .shortcuts #friv {
+    background-size: 3rem;
+  }
+
+  .shortcuts #shopee {
+    background-size: 2rem;
+  }
 }

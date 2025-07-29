@@ -9,13 +9,22 @@
       content="A página inicial feita para o seu navegador que contém relógio, barra de pesquisa do Google/Bing, e atalhos predefinidos."
     />
     <meta property="og:image" content="https://i.imgur.com/KtaiEZL.png" />
+    <meta property="og:image:alt" content="Capa do website" />
+    <meta
+      property="og:url"
+      content="https://joaoluciano1429.github.io/paginainicial.github.io/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GitHub" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="pt_PT" />
     <meta name="theme-color" content="#0042F8" />
     <meta
       name="description"
       content="A página inicial feita para o seu navegador que contém relógio, barra de pesquisa do Google/Bing, e atalhos predefinidos."
     />
     <meta name="author" content="JoãoLuciano1429" />
-    <meta name="robots" content="index, nofollow" />
+    <meta name="robots" content="index, follow" />
     <link
       rel="shortcut icon"
       href="img/icon/icons8-house.svg"
@@ -24,6 +33,7 @@
     <title>Página inicial</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
+    <link rel="manifest" href="js/manifest.json" />
   </head>
   <body>
     <div class="container">
@@ -43,8 +53,8 @@
           </label>
           <button type="submit" role="button">&#128269;</button>
         </div>
+        <p>Mecanismo de busca:</p>
         <div id="chooseMethod">
-          <p>Mecanismo de busca:</p>
           <input
             type="radio"
             name="method"

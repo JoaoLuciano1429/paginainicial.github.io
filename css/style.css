@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html,
@@ -29,8 +30,15 @@ body {
 .container > time {
   color: #0f0500;
   font-size: 5.625rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 100;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 form #search {
@@ -68,13 +76,12 @@ form #chooseMethod {
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2.1875rem;
   flex-wrap: wrap; /* Para telas menores */
 }
 
-form #chooseMethod p {
-  padding-right: 5.625rem;
+form p {
+  font-size: 2.1875rem;
   flex-basis: 100%; /* Para telas menores */
   text-align: center; /* Para telas menores */
 }
@@ -89,6 +96,7 @@ hr {
   border: 2px solid #0042f86b;
   width: 80%; /* Ajuste para responsividade */
   max-width: 56.25rem; /* Máximo para telas grandes */
+  margin-top: 0.25rem;
 }
 
 .shortcuts {
@@ -99,6 +107,7 @@ hr {
   max-width: 25rem; /* Máximo para telas grandes */
   gap: 1.5625rem;
   flex-wrap: wrap; /* Para telas menores */
+  margin-top: 0.5rem;
 }
 
 .shortcuts #youtube {
@@ -173,12 +182,9 @@ hr {
     font-size: 1.25rem;
   }
 
-  form #chooseMethod {
+  form #chooseMethod,
+  form p {
     font-size: 1.5rem;
-  }
-
-  form #chooseMethod p {
-    padding-right: 0; /* Removido para centralizar */
   }
 
   hr {
@@ -216,7 +222,8 @@ hr {
     font-size: 1rem;
   }
 
-  form #chooseMethod {
+  form #chooseMethod,
+  form p {
     font-size: 1.1rem;
   }
 
@@ -277,7 +284,8 @@ hr {
     font-size: 0.6rem;
   }
 
-  form #chooseMethod {
+  form #chooseMethod,
+  form p {
     font-size: 0.8rem;
   }
 

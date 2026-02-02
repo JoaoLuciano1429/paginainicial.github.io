@@ -1,12 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0042F8" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="img/icon/icons8-house.svg" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="A página inicial feita para o seu navegador que contém relógio, barra de pesquisa e atalhos."
+    />
+    <meta name="author" content="João Luciano" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (Facebook, Discord, etc.) -->
     <meta property="og:title" content="Página Inicial" />
     <meta
       property="og:description"
-      content="A página inicial feita para o seu navegador que contém relógio, barra de pesquisa do Google/Bing, e atalhos predefinidos."
+      content="Relógio, buscador e atalhos rápidos na sua página inicial."
     />
     <meta property="og:image" content="https://i.imgur.com/KtaiEZL.png" />
     <meta property="og:image:alt" content="Capa do website" />
@@ -15,16 +35,17 @@
       content="https://joaoluciano1429.github.io/paginainicial.github.io/"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="GitHub" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:locale:alternate" content="pt_PT" />
-    <meta name="theme-color" content="#0042F8" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Página Inicial" />
     <meta
-      name="description"
-      content="A página inicial feita para o seu navegador que contém relógio, barra de pesquisa do Google/Bing, e atalhos predefinidos."
+      name="twitter:description"
+      content="Relógio, buscador e atalhos rápidos na sua página inicial."
     />
-    <meta name="author" content="JoãoLuciano1429" />
-    <meta name="robots" content="index, follow" />
+    <meta name="twitter:image" content="https://i.imgur.com/KtaiEZL.png" />
+
+    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="img/icon/icons8-house.svg"
@@ -33,7 +54,6 @@
     <title>Página inicial</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
-    <link rel="manifest" href="js/manifest.json" />
   </head>
   <body>
     <div class="container">

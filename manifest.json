@@ -2,13 +2,14 @@
   "name": "Página Inicial",
   "short_name": "Página Inicial",
   "description": "A página inicial feita para o seu navegador que contém relógio, barra de pesquisa do Google/Bing, e atalhos predefinidos.",
-  "start_url": "/index.html",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "fullscreen",
   "background_color": "#ffffff",
   "theme_color": "#0042F8",
   "icons": [
     {
-      "src": "/img/icon/icons8-house.svg",
+      "src": "./img/icon/icons8-house.svg",
       "sizes": "96x96",
       "type": "image/svg+xml"
     }

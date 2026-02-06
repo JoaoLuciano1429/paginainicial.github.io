@@ -36,22 +36,45 @@ window.addEventListener("load", () => {
   });
 });
 
+document.getElementById("q").addEventListener("focus", () => {
+  document.getElementById("search").style.border = "2px solid #0042f8";
+});
+
+document.getElementById("q").addEventListener("blur", () => {
+  document.getElementById("search").style.border = "1px solid #000";
+});
+
 const form = document.querySelector("form");
 const google = document.getElementById("Google");
 const bing = document.getElementById("Bing");
+const yandex = document.getElementById("Yandex");
+const duckduckgo = document.getElementById("DuckDuckGo");
 
 google.addEventListener("change", () => {
   form.action = "https://www.google.com/search";
+  document.getElementById("q").setAttribute("name", "q");
 });
 
 bing.addEventListener("change", () => {
   form.action = "https://www.bing.com/search";
+  document.getElementById("q").setAttribute("name", "q");
+});
+
+yandex.addEventListener("change", () => {
+  form.action = "https://www.yandex.com/search/";
+  document.getElementById("q").setAttribute("name", "text");
+});
+
+duckduckgo.addEventListener("change", () => {
+  form.action = "https://duckduckgo.com/?ia=web";
+  document.getElementById("q").setAttribute("name", "q");
 });
 
 const youtube = document.getElementById("YouTube");
 const linkedin = document.getElementById("LinkedIn");
 const friv = document.getElementById("Friv");
 const shopee = document.getElementById("Shopee");
+const github = document.getElementById("GitHub");
 
 youtube.addEventListener("click", () => {
   new Notification("Cacil", {
@@ -81,12 +104,26 @@ shopee.addEventListener("click", () => {
   });
 });
 
+github.addEventListener("click", () => {
+  new Notification("Cacil", {
+    body: "Espero que você esteja desenvolvendo alguma coisa. Seja prestativo!",
+    icon: "img/icon/Cacil.jpg",
+  });
+});
+
 form.addEventListener("submit", (ev) => {
   const searchInput = document.getElementById("q").value;
 
-  const forbiddenWords = ["demônio", "ditador", "tirano", "demonio", "capeta"];
+  const forbiddenWords = [
+    "demônio",
+    "ditador",
+    "tirano",
+    "demonio",
+    "capeta",
+    "monstro",
+  ];
   let containsForbiddenWord = forbiddenWords.some((word) =>
-    searchInput.includes(word)
+    searchInput.includes(word),
   );
 
   if (containsForbiddenWord) {
@@ -95,10 +132,10 @@ form.addEventListener("submit", (ev) => {
     showNotification(
       "Cacil",
       "Olha o mazoquismo! Estou de olho!",
-      "img/icon/Cacil.jpg"
+      "img/icon/Cacil.jpg",
     );
     alert(
-      "Seu vagabundo, acha que pode me enganar? Sua pesquisa contém palavras proibidas, mude seu jeito de falar, masoquista!"
+      "Seu vagabundo, acha que pode me enganar? Sua pesquisa contém palavras proibidas, mude seu jeito de falar, masoquista!",
     );
   }
 });

@@ -47,8 +47,8 @@ form #search {
   align-items: center;
   border: 1px solid #000;
   border-radius: 3.125rem;
-  width: 80%; /* Ajuste para responsividade */
-  max-width: 43.75rem; /* Máximo para telas grandes */
+  width: 60%; /* Ajuste para responsividade */
+  max-width: 50rem; /* Máximo para telas grandes */
 }
 
 form #search label input[type="text"] {
@@ -60,13 +60,16 @@ form #search label input[type="text"] {
   padding-left: 1.875rem;
 }
 
+form #search label input[type="text"]:focus {
+  outline: none;
+}
+
 form #search button[type="submit"] {
   width: 4.375rem;
   height: 3.75rem;
   font-size: 2.5rem;
   border: none;
   border-radius: 0 3.125rem 3.125rem 0;
-  border-left: 1px dotted #ddd;
   background-color: #fff;
   cursor: pointer;
 }
@@ -92,10 +95,14 @@ form #chooseMethod input[type="radio"] {
   accent-color: #0042f8;
 }
 
+form #chooseMethod input[type="radio"] + label {
+  margin-right: 1rem;
+}
+
 hr {
   border: 2px solid #0042f86b;
   width: 80%; /* Ajuste para responsividade */
-  max-width: 56.25rem; /* Máximo para telas grandes */
+  max-width: 90rem; /* Máximo para telas grandes */
   margin-top: 0.25rem;
 }
 
@@ -104,7 +111,7 @@ hr {
   justify-content: center;
   align-items: center;
   width: 90%; /* Ajuste para responsividade */
-  max-width: 25rem; /* Máximo para telas grandes */
+  max-width: 27rem; /* Máximo para telas grandes */
   gap: 1.5625rem;
   flex-wrap: wrap; /* Para telas menores */
   margin-top: 0.5rem;
@@ -127,6 +134,11 @@ hr {
 
 .shortcuts #shopee {
   background-image: url("../img/shopee.png");
+  background-size: 4rem;
+}
+
+.shortcuts #github {
+  background-image: url("../img/github.png");
   background-size: 4rem;
 }
 
@@ -166,9 +178,91 @@ hr {
 
 /* Media Queries */
 
+@media (min-width: 2560px) {
+  .container time {
+    font-size: 12rem;
+  }
+
+  form #search {
+    width: 50rem;
+    border-radius: 4em;
+    height: 5em;
+    background-color: #fff;
+  }
+
+  form #search label input:is([type="text"], [type="submit"]) {
+    font-size: 3.25rem;
+  }
+
+  form #search label input[type="text"] {
+    border-radius: 4em 0 0 4em;
+    width: 45rem;
+    height: 5rem;
+    padding-left: 4rem;
+    max-width: 50rem;
+  }
+
+  form #search label input[type="submit"] {
+    border-radius: 0 4em 4em 0;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  form :is(#chooseMethod, p) {
+    font-size: 4rem;
+  }
+
+  form #chooseMethod input[type="radio"] {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  form #chooseMethod input[type="radio"] + label {
+    margin-right: 3rem;
+  }
+
+  hr {
+    border-width: 4px;
+    margin-bottom: 2rem;
+  }
+
+  .shortcuts a button {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .shortcuts #youtube {
+    background-size: 14rem;
+  }
+
+  .shortcuts #linkedin {
+    background-size: 10rem;
+  }
+
+  .shortcuts #friv {
+    background-size: 8rem;
+  }
+
+  .shortcuts #shopee {
+    background-size: 8rem;
+  }
+
+  .shortcuts #github {
+    background-size: 7.875rem;
+  }
+
+  .shortcuts a span {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .container > time {
     font-size: 4.5rem;
+  }
+
+  form #search {
+    width: 50%;
   }
 
   form #search label input[type="text"] {
@@ -211,15 +305,19 @@ hr {
     font-size: 3.75rem;
   }
 
+  form #search {
+    width: 40%;
+  }
+
   form #search label input[type="text"] {
     height: 2rem;
-    font-size: 1rem;
+    font-size: 0.75rem;
     padding-left: 0.6rem;
   }
 
   form #search button[type="submit"] {
     height: 2rem;
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 
   form #chooseMethod,
@@ -275,13 +373,13 @@ hr {
 
   form #search label input[type="text"] {
     height: 1.75rem;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
     padding-left: 0.4rem;
   }
 
   form #search button[type="submit"] {
     height: 1.75rem;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
   }
 
   form #chooseMethod,
@@ -326,5 +424,9 @@ hr {
 
   .shortcuts #shopee {
     background-size: 2rem;
+  }
+
+  .shortcuts #github {
+    background-size: 3rem;
   }
 }
